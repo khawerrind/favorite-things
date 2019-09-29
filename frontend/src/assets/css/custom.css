@@ -1,0 +1,12 @@
+html {
+  overflow-y: hidden !important;
+}
+.fixed-col {
+  padding-top: 60px !important;
+  height: calc(100vh - 90px);
+  overflow: hidden;
+  width: 100%;
+}
+.required label::after {
+  content: " *";
+}

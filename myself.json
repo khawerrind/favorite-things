@@ -1,0 +1,19 @@
+{
+  "name": "Khawer Zeshan",
+  "age": 33,
+  "gender": "male",
+  "nationality": "Pakistan",
+  "role": "Software Engineer",
+  "passions": [
+    "Programming"
+  ],
+  "interests": [
+    "Gaming"
+  ],
+  "address": {
+    "street": "Secret street address",
+    "city": "Bahawalpur",
+    "state": "Punjab",
+    "Country": "Pakistan"
+  }
+}

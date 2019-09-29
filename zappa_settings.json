@@ -1,0 +1,18 @@
+{
+    "dev": {
+        "django_settings": "api.settings",
+        "profile_name": "default",
+        "project_name": "britecore-assig",
+        "runtime": "python3.6",
+        "s3_bucket": "zappa-typujt7tj",
+        "aws_region": "us-east-1",
+        "exclude": [".vscode", ".git", "node_modules", "venv", "env", "site_media", "*.DS_Store", "*.pyc", "__pycache__/", "*.sqlite3", ".env", "*.md", "*.zip", "static"],
+        "vpc_config" : {
+            "SubnetIds": ["subnet-a12345"],
+            "SecurityGroupIds": ["sg-12345"]
+        },
+        "environment_variables": {
+            "DATABASE_URL": "postgres://username:password@host:5432/db_name"
+        }
+    }
+}

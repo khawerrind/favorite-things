@@ -1,0 +1,29 @@
+[
+    {
+      "model": "favorite_things.categories",
+      "pk": 1,
+      "fields": {
+        "name": "Person",
+        "date_created": "2019-09-23T15:41:08.310833Z",
+        "date_modified": "2019-09-23T15:41:08.310833Z"
+      }
+    },
+    {
+        "model": "favorite_things.categories",
+        "pk": 2,
+        "fields": {
+          "name": "Place",
+          "date_created": "2019-09-23T15:42:08.310833Z",
+          "date_modified": "2019-09-23T15:42:08.310833Z"
+        }
+    },
+    {
+        "model": "favorite_things.categories",
+        "pk": 3,
+        "fields": {
+          "name": "Food",
+          "date_created": "2019-09-23T15:43:08.310833Z",
+          "date_modified": "2019-09-23T15:43:08.310833Z"
+        }
+    }
+  ] 

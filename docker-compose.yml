@@ -1,0 +1,47 @@
+version: '3.7'
+
+services:
+  api:
+    build:
+      context: .
+    container_name: api
+    ports:
+      - "8000:8000"
+    volumes:
+      - static_volume:/usr/src/app/static
+    environment:
+      - DEBUG=true
+      - DATABASE_URL=postgres://britec:britec123@db:5432/britecore
+      - DATABASE=postgres
+      - SQL_HOST=db
+      - SQL_PORT=5432
+      - VUE_APP_API_URL=
+      - VUE_APP_PUBLIC_PATH=
+    depends_on:
+      - db
+  db:
+    image: postgres:11.5-alpine
+    container_name: db
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=britec
+      - POSTGRES_PASSWORD=britec123
+      - POSTGRES_DB=britecore
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./config/nginx:/etc/nginx/conf.d
+      - static_volume:/usr/src/app/static
+    depends_on:
+      - api
+
+volumes:
+  postgres_data:
+  static_volume:
